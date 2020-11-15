@@ -9,7 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/aliasici/step_definitions",
-        dryRun = true,
+        monochrome = true,
+        plugin = {"pretty","html:target/HtmlReports"},
+        dryRun = false,
         publish = true
 )
 public class CucumberGoogleRunner {
